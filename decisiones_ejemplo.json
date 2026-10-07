@@ -1,0 +1,41 @@
+[
+  {
+    "id_seudonimo": "P-56914fb6abfc1475",
+    "accion": "aprobar",
+    "revisor": "rrhh.revisora1",
+    "justificacion": "Se ignora el comentario manipulado; la propuesta se ajusta a la política."
+  },
+  {
+    "id_seudonimo": "P-3ce37a67cab5f62c",
+    "accion": "modificar",
+    "nuevo_pct": 6.0,
+    "revisor": "rrhh.revisora1",
+    "justificacion": "Corrección parcial de la brecha detectada en G3 pendiente de evaluación conjunta."
+  },
+  {
+    "en_bloque": true,
+    "ids": [
+      "P-66b8201ac44c45f9",
+      "P-26d4b95c320bd45c",
+      "P-21c2de686884d7ed",
+      "P-2d96d2fde571f823",
+      "P-5055eb29cc509fd1",
+      "P-7cdf0b1397731f16",
+      "P-b4b4b6f69840e86a",
+      "P-2bb87c5f36cbd63d",
+      "P-e4f23b0c9987614b",
+      "P-0ec6199898c94c11",
+      "P-83cf5cc08899ef23",
+      "P-944ceb722c5e192a",
+      "P-1719694ae544b80a",
+      "P-3cdb6440aa4805ab",
+      "P-bc21104301f65c2c",
+      "P-d0cf8005da11683e",
+      "P-6b5331534ec7fc84",
+      "P-9834647a30e80d88"
+    ],
+    "accion": "aprobar",
+    "revisor": "rrhh.revisora1",
+    "justificacion": "Riesgo bajo; factores conformes a la política vigente."
+  }
+]

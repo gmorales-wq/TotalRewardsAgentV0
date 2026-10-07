@@ -1,0 +1,89 @@
+{
+  "version": "2026.1-demo",
+  "descripcion": "Política retributiva DE EJEMPLO (datos ficticios). Modelo de salario de calificación: mínimo de convenio por grupo profesional + incremento por desempeño, competencias acreditadas y corrección de posición en banda. Sustituir por la política real aprobada por la empresa y negociada/informada a la RLPT (art. 64.4.d ET).",
+  "moneda": "EUR",
+  "grupos_profesionales": {
+    "G1": {
+      "minimo_convenio": 18000,
+      "banda_min": 18000,
+      "banda_mid": 22000,
+      "banda_max": 26000
+    },
+    "G2": {
+      "minimo_convenio": 24000,
+      "banda_min": 24000,
+      "banda_mid": 30000,
+      "banda_max": 36000
+    },
+    "G3": {
+      "minimo_convenio": 32000,
+      "banda_min": 32000,
+      "banda_mid": 40000,
+      "banda_max": 48000
+    },
+    "G4": {
+      "minimo_convenio": 45000,
+      "banda_min": 45000,
+      "banda_mid": 56000,
+      "banda_max": 67000
+    }
+  },
+  "incremento": {
+    "general_pct": 1.5,
+    "desempeno_pct": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 1.0,
+      "4": 2.0,
+      "5": 3.0
+    },
+    "competencia_acreditada_pct": 0.5,
+    "competencias_max": 3,
+    "posicion_banda": {
+      "compa_ratio_bajo": 0.9,
+      "ajuste_bajo_pct": 1.0,
+      "compa_ratio_alto": 1.1,
+      "ajuste_alto_pct": -1.0
+    },
+    "tope_individual_pct": 8.0,
+    "presupuesto_masa_salarial_pct": 3.5
+  },
+  "factores_permitidos": [
+    "general",
+    "desempeno",
+    "competencias",
+    "posicion_banda",
+    "ajuste_presupuestario",
+    "minimo_convenio"
+  ],
+  "variables_prohibidas": [
+    "sexo",
+    "edad",
+    "nacionalidad",
+    "baja_medica",
+    "afiliacion_sindical",
+    "jornada_parcial",
+    "comentario_responsable"
+  ],
+  "equidad": {
+    "umbral_brecha_pct": 5.0,
+    "nota_umbral": "El 5 % replica el umbral del art. 10 de la Directiva (UE) 2023/970 para la evaluación retributiva conjunta; aquí se usa solo como umbral de ALERTA interna, no como juicio jurídico.",
+    "celda_minima": 3,
+    "umbral_correlacion_proxy": 0.3,
+    "nota_proxy": "Umbral heurístico configurable, sin respaldo normativo; una correlación por encima del umbral obliga a revisión humana, no prueba discriminación.",
+    "umbral_diferencia_desempeno": 0.5,
+    "nota_desempeno": "Diferencia de valoración media entre sexos (en puntos de la escala 1-5) a partir de la cual se alerta de posible sesgo en el dato de origen. Heurístico.",
+    "umbral_ampliacion_brecha_pp": 0.5,
+    "nota_ampliacion": "Puntos porcentuales de ampliación de la brecha (tras vs antes) a partir de los cuales se alerta. Heurístico."
+  },
+  "supervision": {
+    "pct_riesgo_alto": 6.0,
+    "aprobacion_en_bloque_permitida_para": [
+      "bajo"
+    ],
+    "longitud_minima_justificacion": 20
+  },
+  "datos": {
+    "antiguedad_maxima_dias": 400
+  }
+}

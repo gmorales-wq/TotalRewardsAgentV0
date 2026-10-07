@@ -1,0 +1,19 @@
+[project]
+name = "agfts-swarm"
+version = "0.1.0"
+description = "Enjambre de agentes para decisiones retributivas con gobernanza integrada (prototipo de investigación)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+claude = ["anthropic"]
+
+[project.scripts]
+agfts-swarm = "agfts_swarm.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

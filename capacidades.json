@@ -1,0 +1,23 @@
+{
+  "_descripcion": "Matriz de mínimo privilegio. Cada agente solo puede leer los campos y usar las herramientas listadas. El orquestador la aplica; cualquier acceso fuera de ella se bloquea y queda registrado. (OWASP LLM06 Excessive Agency; OWASP Agentic ASI02/ASI03).",
+  "custodio_dato": {
+    "campos": ["id_empleado", "grupo", "salario_actual", "desempeno", "competencias_acreditadas", "antiguedad_anios", "jornada_parcial", "sexo", "edad", "comentario_responsable", "fecha_dato"],
+    "herramientas": ["seudonimizar", "validar_contrato", "boveda_escribir"]
+  },
+  "analista_retributivo": {
+    "campos": ["id_seudonimo", "grupo", "salario_actual", "desempeno", "competencias_acreditadas"],
+    "herramientas": ["politica_leer"]
+  },
+  "auditor_equidad": {
+    "campos": ["id_seudonimo", "grupo", "salario_actual", "desempeno", "competencias_acreditadas", "antiguedad_anios", "jornada_parcial"],
+    "herramientas": ["boveda_leer", "politica_leer"]
+  },
+  "guardian_cumplimiento": {
+    "campos": ["id_seudonimo", "grupo", "salario_actual", "alerta_inyeccion"],
+    "herramientas": ["politica_leer"]
+  },
+  "explicador": {
+    "campos": ["id_seudonimo", "grupo", "salario_actual"],
+    "herramientas": ["politica_leer", "llm_generar"]
+  }
+}
